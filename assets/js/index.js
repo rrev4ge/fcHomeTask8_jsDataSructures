@@ -44,20 +44,3 @@ function addList(...rest) {
     }
     return list;
 }
-
-
-
-const stack = new Stack();
-
-stack.push("test1");
-stack.push("test2");
-stack.push("test3");
-stack.push("test4");
-
-const listw = new LinkedList();
-
-listw.addNode("test1");
-listw.addNode("tes2");
-listw.addNode("test3");
-listw.addNode(2);
-listw.addNode(6);
