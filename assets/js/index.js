@@ -24,9 +24,10 @@ function checkBraces(string) {
 
 
 
-function addList(...rest) {
+function addList(string) {
     const list = new LinkedList();
-    for (const value of rest) {
+    for (let value of string) {
+        value = Number(value);
         if (!Number.isInteger(value)) {
             throw new TypeError("Value is do not Integer number");
         }
