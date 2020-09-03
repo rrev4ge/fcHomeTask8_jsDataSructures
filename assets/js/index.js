@@ -26,21 +26,13 @@ function checkBraces(string) {
 
 function addList(string) {
     const list = new LinkedList();
-    for (let value of string) {
-        value = Number(value);
-        if (!Number.isInteger(value)) {
-            throw new TypeError("Value is do not Integer number");
+    for (let elm of string) {
+        elm = Number(elm);
+        if (!Number.isInteger(elm)) {
+            throw new TypeError("elm is do not Integer number");
         }
-        let valueArray = [...list];
-        let i = 0;
-        for (const elm of valueArray) {
-            if (value !== elm) {
-                i++;
-            }
-        }
-        console.log(i);
-        if (i === valueArray.length) {
-            list.addNode(value);
+        if (list.length === 0 || elm !== list.getNodeByIndex(list.length - 1).value) {
+            list.addNode(elm);
         }
     }
     return list;
